@@ -1,0 +1,2 @@
+import { defineConfig, devices } from '@playwright/test';
+export default defineConfig({ testDir:'./tests/e2e',timeout:60000,fullyParallel:false,workers:1,reporter:[['list'],['html',{open:'never'}]],use:{baseURL:'http://127.0.0.1:4180',trace:'retain-on-failure'},projects:[{name:'chromium',use:{...devices['Desktop Chrome'],launchOptions:process.env.CHROME_EXECUTABLE_PATH ? {executablePath:process.env.CHROME_EXECUTABLE_PATH}:undefined}}],webServer:{command:'node tests/static-server.mjs',port:4180,reuseExistingServer:!process.env.CI}});
