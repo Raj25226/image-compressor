@@ -28,7 +28,7 @@ Open the Local URL printed by Next.js, normally `http://127.0.0.1:3000`.
 - Distinct static target-size guides, privacy page, sitemap/robots support, and related-tool roadmap.
 - Unit/component tests, production-export browser tests, and GitHub Actions.
 
-Images are not uploaded. No backend, database, external image service, analytics vendor, ads, authentication, or persistent image storage is used. The optional local analytics event hook excludes filenames and image contents.
+Images are not uploaded. No backend, database, external image service, ads, authentication, or persistent image storage is used. Cloudflare Web Analytics loads once from the shared app layout to measure page views, visits, and site performance. Images and filenames are not supplied to analytics. The separate local compression event hook excludes filenames and image contents and is not transmitted.
 
 ## Structure
 
